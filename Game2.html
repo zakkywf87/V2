@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodieAI - Rekomendasi Makanan Cerdas</title>
+    <!-- Link ke file CSS terpisah -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">🍜 FoodieAI</h1>
+            <p class="tagline">Rekomendasi Makanan Berbasis Kecerdasan Buatan</p>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="container">
+            <!-- Profil Pengguna -->
+            <section class="profil-section">
+                <h2>Profil Preferensi Anda</h2>
+                <div class="profil-container">
+                    <div class="input-group">
+                        <label for="nama-pengguna">Nama Pengguna:</label>
+                        <input type="text" id="nama-pengguna" placeholder="Masukkan nama Anda">
+                    </div>
+                    <div class="input-group">
+                        <label for="lokasi-pengguna">Lokasi:</label>
+                        <select id="lokasi-pengguna">
+                            <option value="">Pilih Lokasi</option>
+                            <option value="Jakarta">Jakarta</option>
+                            <option value="Bandung">Bandung</option>
+                            <option value="Surabaya">Surabaya</option>
+                            <option value="Yogyakarta">Yogyakarta</option>
+                            <option value="Medan">Medan</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="budget-pengguna">Budget (Rp):</label>
+                        <select id="budget-pengguna">
+                            <option value="">Pilih Budget</option>
+                            <option value="murah">< 25,000 (Murah)</option>
+                            <option value="sedang">25,000 - 75,000 (Sedang)</option>
+                            <option value="mahal">> 75,000 (Premium)</option>
+                        </select>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Rating Makanan untuk Learning -->
+            <section class="rating-section">
+                <h2>Beri Rating Makanan (untuk Pembelajaran AI)</h2>
+                <div class="makanan-grid" id="makanan-rating">
+                    <!-- Akan diisi oleh JavaScript -->
+                </div>
+                <button id="btn-simpan-rating" class="btn-primary">Simpan Preferensi</button>
+            </section>
+
+            <!-- Hasil Rekomendasi -->
+            <section class="rekomendasi-section">
+                <h2>Rekomendasi Makanan untuk Anda</h2>
+                <div class="filter-container">
+                    <button id="btn-dapatkan-rekomendasi" class="btn-primary">Dapatkan Rekomendasi AI</button>
+                    <button id="btn-reset-pembelajaran" class="btn-secondary">Reset Pembelajaran</button>
+                </div>
+                <div class="rekomendasi-grid" id="hasil-rekomendasi">
+                    <div class="info-card">
+                        <p>Silakan beri rating pada beberapa makanan terlebih dahulu, kemudian klik "Dapatkan Rekomendasi AI" untuk melihat saran makanan yang dipersonalisasi.</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Visualisasi Pembelajaran -->
+            <section class="learning-section">
+                <h2>Visualisasi Pembelajaran AI</h2>
+                <div class="learning-stats">
+                    <div class="stat-card">
+                        <h3>Data Pembelajaran</h3>
+                        <p>Total Rating: <span id="total-rating">0</span></p>
+                        <p>Akurasi Model: <span id="akurasi-model">0%</span></p>
+                        <p>Preferensi Terdeteksi: <span id="preferensi-utama">-</span></p>
+                    </div>
+                    <div class="stat-card">
+                        <h3>Adaptasi Real-time</h3>
+                        <p>Pembelajaran Aktif: <span id="status-pembelajaran">Tidak Aktif</span></p>
+                        <p>Bobot Model: <span id="bobot-model">Belum Dilatih</span></p>
+                        <p>Tingkat Kepercayaan: <span id="confidence-level">0%</span></p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 FoodieAI - Sistem Rekomendasi Makanan dengan Machine Learning</p>
+        </div>
+    </footer>
+
+    <!-- Link ke file JavaScript terpisah -->
+    <script src="script.js"></script>
+</body>
+</html>
